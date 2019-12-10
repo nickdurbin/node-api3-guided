@@ -10,6 +10,9 @@ server.use(express.json())
 server.use("/", welcomeRouter)
 server.use("/api/hubs", hubRouter)
 
+const port = 4000
+const host = "http://localhost:"
+
 server.listen(4000, () => {
-  console.log("\n*** Server Running on http://localhost:4000 ***\n")
+  console.log(`\n*** Server Running on ${host}${port} ***\n`)
 })
